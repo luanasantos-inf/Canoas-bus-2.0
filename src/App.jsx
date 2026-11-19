@@ -1,10 +1,12 @@
 import { Cabecalho } from './Cabecalho';
-import './Cabecalho.css';
+import { Rodape } from './Rodape';
+
 
 export function App() {
   return (
     <div>
       <Cabecalho />
+      <Rodape />
     </div>
   );
 }
