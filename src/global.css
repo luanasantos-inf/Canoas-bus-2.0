@@ -44,11 +44,6 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
   border: 0;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup,
-menu, nav, section {
-  display: block;
-}
-
 *{
   font-family: var(--fonte-global);
 }
