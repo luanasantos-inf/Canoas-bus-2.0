@@ -1,16 +1,28 @@
-# React + Vite
+## 🚀 Como rodar o projeto localmente
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Pré-requisitos
+Antes de começar, certifique-se de ter instalado em sua máquina:
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org) (versão 18 ou superior)
 
-Currently, two official plugins are available:
+### Passo a passo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+# 1. Clone este repositório
+git clone https://github.com
 
-## React Compiler
+# 2. Acesse a pasta do projeto no terminal
+cd nome-do-repositorio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 3. Instale as dependências
+npm install
 
-## Expanding the ESLint configuration
+# 4. Configure as variáveis de ambiente (opcional)
+# Renomeie o arquivo .env.example para .env e preencha com suas chaves
+cp .env.example .env
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 5. Inicie o servidor de desenvolvimento
+npm run dev
+```
+
+Após rodar o comando, acesse `http://localhost:5173` no seu navegador para visualizar a aplicação.
