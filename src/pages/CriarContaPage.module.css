@@ -1,13 +1,12 @@
-.paginaLoginWrapper,
-.paginaLoginWrapper * {
+.paginaCriarContaWrapper,
+.paginaCriarContaWrapper * {
   box-sizing: border-box;
 }
 
-.paginaLoginWrapper {
+.paginaCriarContaWrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--cor-gelo);
   font-family: var(--fonte-global);
 }
 
@@ -21,6 +20,7 @@
   width: 100%;
   max-width: 1360px;
   margin: 0 auto;
+  background-color:var(--background-corpo);
 }
 
 .apresentacao {
@@ -28,7 +28,7 @@
   flex-direction: column;
   flex: 1 1 40%;
   min-width: 0;
-  background-color: var(--cor-creme);
+  background-color: var(--background-apresentacao);
   border-radius: 1rem;
   padding: 2.1875rem;
 }
@@ -36,7 +36,7 @@
 .apresentacaoSlogan {
   font-size: 0.75rem;
   font-weight: var(--fonte-600);
-  color: var(--cor-laranja-texto);
+  color: var(--cor-laranja-primario);
   letter-spacing: 0.5px;
 }
 
@@ -44,7 +44,7 @@
   font-family: var(--fonte-global);
   font-size: 2.5rem;
   font-weight: var(--fonte-600);
-  color: var(--cor-preto);
+  color: var(--titulos-textos);
   line-height: 1.2;
   margin-top: 0.625rem;
   margin-bottom: 0.625rem;
@@ -52,7 +52,7 @@
 
 .apresentacaoTexto {
   font-size: 1rem;
-  color: var(--cor-azul-cinzento);
+  color: var(--detalhes);
 }
 
 .apresentacaoImagem {
@@ -76,11 +76,12 @@
   max-width: 32rem;
   width: 100%;
   margin: 0 auto;
+  color:var(--titulos-textos);
 }
 
 .fraseApoio {
   font-size: 0.875rem;
-  color: var(--cor-azul-cinzento);
+  color: var(--detalhes);
   margin-top: 0.5rem;
   margin-bottom: 1.875rem;
 }
@@ -102,7 +103,7 @@
 .campoPreenchimento label {
   font-size: 0.875rem;
   font-weight: var(--fonte-500);
-  color: var(--cor-preto);
+  color: var(--cor-label);
 }
 
 .campoPreenchimento input {
@@ -110,9 +111,9 @@
   height: 2.5rem;
   padding: 0 0.875rem;
   border-radius: 12px;
-  border: 1px solid var(--cor-azul-cinzento);
-  background-color: var(--cor-branco);
-  color: var(--cor-preto);
+  border: 1px solid var(--detalhes);
+  background-color: transparent;
+  color: var(--titulos-textos);
 }
 
 .campoPreenchimentoSenha {
@@ -127,9 +128,9 @@
   height: 2.5rem;
   padding: 0 2.75rem 0 0.875rem;
   border-radius: 12px;
-  border: 1px solid var(--cor-azul-cinzento);
-  background-color: var(--cor-branco);
-  color: var(--cor-preto);
+  border: 1px solid var(--detalhes);
+  background-color:transparent;
+  color: var(--titulos-textos);
 }
 
 .botaoMostrarSenha {
@@ -145,46 +146,46 @@
   padding: 0;
   background: none;
   border: none;
-  color: var(--cor-azul-cinzento);
+  color: var(--detalhes);
   cursor: pointer;
 }
 
 .botaoMostrarSenha:hover {
-  color: var(--cor-preto);
+  color: var(--detalhes);
 }
 
 .mensagem {
   font-size: 0.875rem;
-  color: var(--cor-vermelho);
+  color: var(--cor-vermelho-alerta);
 }
 
 .btnCadastrar {
   width: 100%;
   height: 2.5rem;
   padding: 0.625rem;
-  background-color: var(--cor-laranja);
+  background-color: var(--cor-laranja-primario);
   border: none;
   border-radius: 12px;
   font-weight: var(--fonte-600);
-  color: var(--cor-preto);
+  color: var(--titulos-textos);
   cursor: pointer;
   transition: background-color 0.2s, filter 0.2s;
 }
 
 .btnEntrar:hover {
-  background-color: var(--cor-laranja-escuro);
+  background-color: var(--cor-laranja-hover);
   filter: brightness(0.95);
 }
 
 .mudarEntrada {
   font-size: 0.875rem;
   font-weight: var(--fonte-400);
-  color: var(--cor-preto);
+  color: var(--detalhes);
   padding-top: 1.5rem;
 }
 
 .mudarEntrada a {
-  color: var(--cor-preto);
+  color: var(--titulos-textos);
   font-weight: var(--fonte-500);
   text-decoration: none;
   cursor: pointer;

@@ -7,7 +7,7 @@ import styles from './CriarContaPage.module.css';
 export function CriarContaPage() {
   return (
 
-    <div className={styles.paginaLoginWrapper}>
+    <div className={styles.paginaCriarContaWrapper}>
     <Cabecalho variante="publico" />
     <main className={styles.mainCriarConta}>
       <aside className={styles.apresentacao}>

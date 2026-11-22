@@ -1,0 +1,7 @@
+.rodape {
+  font-family: var(--fonte-global);
+  font-size: 12px;
+  background-color: var(--background-cabecalho-rodape);
+  color: var(--detalhes);
+  padding: 1rem 1.25rem;
+}

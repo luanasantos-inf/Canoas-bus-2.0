@@ -7,43 +7,125 @@
 }
 
 :root {
-  --cor-branco: #ffffff;
-  --cor-vermelho: #b91c1c;
-  --cor-vermelho-claro: #fef2f2;
-  --cor-vermelho-hover: #b02a37;
-  --cor-preto: #1e293b;
-  --cor-azul-cinzento: #64748b;
-  --cor-laranja: #f59e0b;
-  --cor-laranja-primario: #f97316;
-  --cor-laranja-escuro: #d97706;
-  --cor-laranja-hover: #ea580c;
-  --cor-laranja-texto: #92400e;
-  --cor-creme: #fef6e4;
-  --cor-gelo: #f8fafc;
-  --cor-verde: #15803d;
-  --cor-verde-claro: #f0fdf4;
-  --cor-cinza-claro: #e2e8f0;
-  --cor-cinza-borda: #f1f5f9;
-  
   --fonte-global: "Inter", sans-serif;
   --fonte-400: 400;
   --fonte-500: 500;
   --fonte-600: 600;
   --fonte-700: 700;
+
+  --background-cabecalho-rodape: #ffffff;
+  --background-corpo: #f8fafc;
+  --detalhes: #617293;
+  --background-apresentacao: #FFF7E5;
+  --titulos-textos: #000000;
+  --cor-label: #1e293b;
+  --cor-laranja-primario: #f97316;
+  --cor-laranja-hover: #ea580c;
+  --cor-vermelho-alerta: #b91c1c;
+  --cor-vermelho-claro: #fef2f2;
+
+  
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
-em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt,
-var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label,
-legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary, time, mark, audio, video {
+:root[data-theme="dark"] {
+  --background-cabecalho-rodape: #000000;
+  --background-corpo: #111111;
+  --detalhes: #6D7788;
+  --background-apresentacao: #00081a;
+  --titulos-textos: #FFFFFF;
+  --cor-label: #d3d3d3;
+  --cor-laranja-primario: #f97316;
+  --cor-laranja-hover: #ea580c;
+  --cor-vermelho-alerta: #b91c1c;
+  --cor-vermelho-claro: #fef2f2;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-*{
+* {
   font-family: var(--fonte-global);
 }
