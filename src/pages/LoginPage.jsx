@@ -25,7 +25,7 @@ export function LoginPage() {
 
     setMensagem('');
     console.log('Dados de login:', { email, senha });
-    navigate('/linhas');
+    navigate('/dadoscadastro');
   }
 
   return (

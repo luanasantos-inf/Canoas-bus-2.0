@@ -4,13 +4,14 @@ import { Rodape } from './components/Rodape';
 import { LoginPage } from './pages/LoginPage';
 import { CriarContaPage } from './pages/CriarContaPage';
 import { LinhasPage } from './pages/LinhasPage';
+import { DadosCadastroPage } from './pages/DadosCadastroPage';
 
-function Layout({ variante = 'publico' }) {
+function Layout() {
   return (
     <div className="app-container">
-      <Cabecalho variante={variante} />
+      
       <Outlet />
-      <Rodape />
+      
     </div>
   );
 }
@@ -25,6 +26,7 @@ export function App() {
 
         {/* Rotas de Usuário */}
         <Route element={<Layout variante="usuario" />}>
+        <Route path="/dadoscadastro" element={<DadosCadastroPage />} />
           <Route path="/linhas" element={<LinhasPage />} />
         </Route>
 

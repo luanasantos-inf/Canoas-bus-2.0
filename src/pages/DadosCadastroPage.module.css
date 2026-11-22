@@ -1,0 +1,31 @@
+.paginaDadosCadastro,
+.paginaDadosCadastro * {
+  box-sizing: border-box;
+}
+
+.paginaDadosCadastro{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--fonte-global);
+}
+
+.mainDados{
+  background-color:var(--background-corpo);
+}
+
+.breadcrumb {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--detalhes);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+
+.breadcrumb a {
+  color: var(--detalhes);
+  text-decoration: none;
+}
