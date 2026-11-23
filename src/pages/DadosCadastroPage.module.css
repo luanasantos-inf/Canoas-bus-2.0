@@ -154,6 +154,12 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.campoPreenchimento input:focus {
+  outline: none;
+  border-color: var(--cor-laranja-primario);
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+}
+
 .campoPreenchimentoSenha {
   position: relative;
   display: flex;
@@ -162,6 +168,12 @@
 
 .campoPreenchimentoSenha input {
   padding-right: 2.75rem;
+}
+
+.campoPreenchimentoSenha input:focus {
+  outline: none;
+  border-color: var(--cor-laranja-primario);
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
 }
 
 .botaoMostrarSenha{
@@ -225,7 +237,6 @@
   font-size: 0.875rem;
   font-weight: 500;
 }
-
 
 .secaoExcluir {
   margin-top: 0.5rem;

@@ -22,7 +22,7 @@
   background-color:var(--background-corpo);
 }
 
-/* Coluna da esquerda: apresentação */
+
 .apresentacao {
   display: flex;
   flex-direction: column;
@@ -66,7 +66,6 @@
   padding-top: 2rem;
 }
 
-/* Coluna da direita: formulário */
 .recepcaoFormulario {
   display: flex;
   flex-direction: column;
@@ -98,6 +97,7 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+  background-color: transparent;
 }
 
 .campoPreenchimento label {
@@ -116,6 +116,21 @@
   color: var(--detalhes);
 }
 
+.campoPreenchimento input:focus {
+  outline: none;
+  border-color: var(--cor-laranja-primario);
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+}
+
+.campoPreenchimento input::placeholder {
+  color: var(--detalhes);
+  font-size: 0.875rem;
+}
+
+.campoPreenchimento input:required {
+  border-color: var(--cor-vermelho--alerta);
+}
+
 .campoPreenchimentoSenha {
   position: relative;
   display: flex;
@@ -131,6 +146,12 @@
   border: 1px solid var(--detalhes);
   background-color: transparent;
   color: var(--detalhes);
+}
+
+.campoPreenchimentoSenha input:focus {
+  outline: none;
+  border-color: var(--cor-laranja-primario);
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
 }
 
 .botaoMostrarSenha {
