@@ -23,8 +23,10 @@
   --cor-laranja-hover: #ea580c;
   --cor-vermelho-alerta: #b91c1c;
   --cor-vermelho-claro: #fef2f2;
-  --cor-vermelho-hover:#b22222;
+  --cor-vermelho-hover: #b22222;
+  
 }
+
 
 :root[data-theme="dark"] {
   --background-cabecalho-rodape: #000000;
@@ -37,7 +39,20 @@
   --cor-laranja-hover: #ea580c;
   --cor-vermelho-alerta: #b91c1c;
   --cor-vermelho-claro: #010d0d;
-   --cor-vermelho-hover:#b22222;
+  --cor-vermelho-hover: #b22222;
+  
+}
+
+.img-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .img-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .img-dark {
+  display: block;
 }
 
 html,

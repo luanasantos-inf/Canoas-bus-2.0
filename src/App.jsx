@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { LoginPage } from './pages/LoginPage';
 import { CriarContaPage } from './pages/CriarContaPage';
-import { LinhasPage } from './pages/LinhasPage';
 import { DadosCadastroPage } from './pages/DadosCadastroPage';
 import './global.css';
 
@@ -26,7 +25,7 @@ export function App() {
         {/* Rotas de Usuário */}
         <Route element={<Layout variante="usuario" />}>
         <Route path="/dadoscadastro" element={<DadosCadastroPage />} />
-          <Route path="/linhas" element={<LinhasPage />} />
+
         </Route>
 
         {/* Rotas de Administrador */}
