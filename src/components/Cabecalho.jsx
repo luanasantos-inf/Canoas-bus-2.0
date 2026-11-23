@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Cabecalho.module.css';
 import { useTema } from '../hooks/useTema.js';
+import { FiSun, FiMoon } from 'react-icons/fi';
 
 const CLASSES_VARIANTE = {
   publico: styles.cabecalhoPublico,
