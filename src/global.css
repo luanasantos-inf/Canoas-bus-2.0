@@ -24,9 +24,6 @@
   --cor-vermelho-alerta: #b91c1c;
   --cor-vermelho-claro: #fef2f2;
   --cor-vermelho-hover:#b22222;
-
-
-  
 }
 
 :root[data-theme="dark"] {
