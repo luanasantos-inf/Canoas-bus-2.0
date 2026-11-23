@@ -23,6 +23,8 @@
   --cor-laranja-hover: #ea580c;
   --cor-vermelho-alerta: #b91c1c;
   --cor-vermelho-claro: #fef2f2;
+  --cor-vermelho-hover:#b22222;
+
 
   
 }
@@ -37,7 +39,7 @@
   --cor-laranja-primario: #f97316;
   --cor-laranja-hover: #ea580c;
   --cor-vermelho-alerta: #b91c1c;
-  --cor-vermelho-claro: #fef2f2;
+  --cor-vermelho-claro: #010d0d;
 }
 
 html,
