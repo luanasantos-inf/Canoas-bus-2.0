@@ -36,7 +36,7 @@
 .apresentacaoSlogan {
   font-size: 0.75rem;
   font-weight: var(--fonte-600);
-  color: var(--cor-laranja-texto);
+  color: var(--cor-laranja-primario);
   letter-spacing: 0.5px;
 }
 
@@ -177,7 +177,10 @@
 
 .mensagem {
   font-size: 0.875rem;
-  color: var(--cor-vermelho--alerta);
+  background-color: var(--cor-vermelho-claro);
+  padding: 0.5rem;
+  color: var(--cor-vermelho-alerta);
+  margin-top: 0.5rem;
 }
 
 .btnEntrar {
