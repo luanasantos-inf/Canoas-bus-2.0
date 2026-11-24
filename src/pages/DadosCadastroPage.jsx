@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
 import styles from './DadosCadastroPage.module.css';
-import percursoLight from '../assets/percurso-ilustrativo.svg';
-import percursoDark from '../assets/percurso-ilustrativo-dark.svg';
+import percursoLight from '../assets/percurso-ilustrativo.png';
+import percursoDark from '../assets/percurso-ilustrativo-dark.png';
 
 
 export function DadosCadastroPage() {
