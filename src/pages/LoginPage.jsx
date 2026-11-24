@@ -44,15 +44,16 @@ export function LoginPage() {
             Encontre linhas e pontos de ônibus e explore Canoas com mais facilidade.
           </p>
           <img
-            className={`${styles.apresentacaoImagem} ${styles.imgLight}`}
+            className={`${styles.apresentacaoImagem} imgLight`}
             src={percursoLight}
             alt="Ilustração de transporte público em Canoas"
           />
           <img
-            className={`${styles.apresentacaoImagem} ${styles.imgDark}`}
+            className={`${styles.apresentacaoImagem} imgDark`}
             src={percursoDark}
             alt="Ilustração de transporte público em Canoas"
           />
+
         </aside>
 
         <div className={styles.recepcaoFormulario}>

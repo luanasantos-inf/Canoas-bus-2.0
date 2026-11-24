@@ -43,17 +43,21 @@
   
 }
 
-.img-dark {
-  display: none;
+
+.imgDark {
+  display: none !important;
 }
 
-:root[data-theme="dark"] .img-light {
-  display: none;
+
+:root[data-theme="dark"] .imgLight {
+  display: none !important;
 }
 
-:root[data-theme="dark"] .img-dark {
-  display: block;
+:root[data-theme="dark"] .imgDark {
+  display: block !important;
 }
+
+
 
 html,
 body,
