@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import styles from './Cabecalho.module.css';
 import { useTema } from '../hooks/useTema.js';
+import { IoIosLogOut } from "react-icons/io";
+
+
 
 const CLASSES_VARIANTE = {
   publico: styles.cabecalhoPublico,
@@ -48,7 +51,11 @@ export function Cabecalho({ variante = 'publico', nomeUsuario }) {
           <Link to="/linhas">Linhas</Link>
           <Link to="/favoritos">Favoritos</Link>
           {nomeUsuario && <span className={styles.cabecalhoUsuario}>{nomeUsuario}</span>}
-          <button type="button" className={styles.cabecalhoSair}>Sair</button>
+          <button type="button" className={styles.cabecalhoSair}>
+            <IoIosLogOut  />
+            <span>Sair</span>
+          </button>
+
         </nav>
       )}
 
