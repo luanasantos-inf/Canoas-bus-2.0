@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import styles from './Cabecalho.module.css';
 import { useTema } from '../hooks/useTema.js';
-import { FiSun, FiMoon } from 'react-icons/fi';
+import { MdLightMode, MdDarkMode } from 'react-icons/md';
+
 
 const CLASSES_VARIANTE = {
   publico: styles.cabecalhoPublico,
@@ -34,7 +35,7 @@ export function Cabecalho({ variante = 'publico', nomeUsuario }) {
           onClick={alternarTema}
           aria-label={ehEscuro ? 'Ativar modo claro' : 'Ativar modo escuro'}
         >
-          {ehEscuro ? 'Modo claro' : 'Modo escuro'}
+          {ehEscuro ? <MdLightMode /> : <MdDarkMode />}
         </button>
       </div>
 
