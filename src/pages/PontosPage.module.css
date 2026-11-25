@@ -1,0 +1,10 @@
+.paginaPontosWrapper .paginaPontosWrapper * {
+    box-sizing: border-box;
+}
+
+.paginaPontosWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--fonte-global);
+}
