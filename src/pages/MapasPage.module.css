@@ -1,0 +1,80 @@
+.paginaMapasWrapper{
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+}
+
+.pagina-mapa .mapa-area {
+  position: relative;
+  isolation: isolate;
+
+  flex: 1;
+  min-height: 0;
+
+  display: block;
+  padding: 0;
+}
+
+#mapa {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.mapa-busca,
+.mapa-detalhes {
+  position: absolute;
+  z-index: 1;
+
+  width: 320px;
+  padding: 20px;
+
+  background-color: var(--cor-branco);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #00000014;
+}
+
+.mapa-busca {
+  top: 24px;
+  left: 24px;
+}
+
+.mapa-detalhes {
+  right: 24px;
+  bottom: 40px;
+}
+
+.mapa-detalhes[hidden] {
+  display: none;
+}
+
+.mapa-busca h2,
+.mapa-detalhes h2 {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .mapa-busca {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+  }
+
+  .mapa-detalhes {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .mapa-area:has(.mapa-detalhes:not([hidden]))
+    .leaflet-bottom {
+    bottom: var(--altura-painel, 200px);
+  }
+
+  .pagina-mapa .leaflet-top.leaflet-right {
+    top: 170px;
+  }
+}
