@@ -17,6 +17,7 @@ cd nome-do-repositorio
 # 3. Instale as dependências
 npm install
 npm install react-icons
+npm install react-router-dom leaflet
 
 
 # 4. Configure as variáveis de ambiente (opcional)
