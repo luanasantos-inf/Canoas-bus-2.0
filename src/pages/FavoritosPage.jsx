@@ -21,7 +21,7 @@ export function FavoritosPage() {
                     </div>
                 </div>
 
-                <div className={style.abas} role="tablist" aria-label="Tipo de favorito">
+                <div className={styles.abas} role="tablist" aria-label="Tipo de favorito">
                     <button
                         type="button"
                         className={styles.aba}
@@ -47,10 +47,10 @@ export function FavoritosPage() {
                 </div>
 
                 <section id="painel-linhas" role="tabpanel" aria-labelledby="aba-linhas">
-                    <div className={style.gradeCartoes} id="grade-favoritas"></div>
-                    <p className={style.vazio} id="vazio-linhas" hidden>
+                    <div className={styles.gradeCartoes} id="grade-favoritas"></div>
+                    <p className={styles.vazio} id="vazio-linhas" hidden>
                         Você ainda não favoritou nenhuma linha.
-                        <a className={style.linkDestaque} href="linhas-cliente.html">Ver linhas</a>
+                        <a className={styles.linkDestaque} href="linhas-cliente.html">Ver linhas</a>
                     </p>
                 </section>
 
