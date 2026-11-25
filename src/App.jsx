@@ -5,7 +5,8 @@ import { DadosCadastroPage } from './pages/DadosCadastroPage';
 import { FavoritosPage } from './pages/FavoritosPage';
 import { LinhasPage } from './pages/LinhasPage';
 import { PontosPage } from './pages/PontosPage';
-import { Mapaspage } from './pages/MapasPage';
+import { MapasPage } from './pages/MapasPage.jsx';
+
 import './global.css';
 
 function Layout() {
@@ -32,7 +33,7 @@ export function App() {
           <Route path="/favoritos" element={<FavoritosPage />} />
           <Route path="/linhas" element={<LinhasPage />} />
           <Route path="/pontos" element={<PontosPage />} />
-          <Route path="/mapas" element={<Mapaspage/>}/>
+          <Route path="/mapas" element={<MapasPage />} />
         </Route>
 
         {/* Rotas de Administrador */}
