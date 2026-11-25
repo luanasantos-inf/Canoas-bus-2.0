@@ -2,14 +2,17 @@ import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom
 import { LoginPage } from './pages/LoginPage';
 import { CriarContaPage } from './pages/CriarContaPage';
 import { DadosCadastroPage } from './pages/DadosCadastroPage';
+import { FavoritosPage } from './pages/FavoritosPage';
+import { LinhasPage } from './pages/LinhasPage';
+import { PontosPage } from './pages/PontosPage';
 import './global.css';
 
 function Layout() {
   return (
     <div className="app-container">
-      
+
       <Outlet />
-      
+
     </div>
   );
 }
@@ -24,7 +27,10 @@ export function App() {
 
         {/* Rotas de Usuário */}
         <Route element={<Layout variante="usuario" />}>
-        <Route path="/dadoscadastro" element={<DadosCadastroPage />} />
+          <Route path="/dadoscadastro" element={<DadosCadastroPage />} />
+          <Route path="/favoritos" element={<FavoritosPage />} />
+          <Route path="/linhas" element={<LinhasPage />} />
+          <Route path="/pontos" element={<PontosPage />} />
         </Route>
 
         {/* Rotas de Administrador */}
