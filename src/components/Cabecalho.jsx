@@ -43,8 +43,8 @@ export function Cabecalho({ variante = 'publico', nomeUsuario }) {
       {/* Variação 2: Usuário logado */}
       {variante === 'usuario' && (
         <nav className={styles.cabecalhoNavegacao} aria-label="Menu do usuário">
-          <Link to="mapas">Mapas</Link>
-          <Link to="pontos">Pontos</Link>
+          <Link to="/mapas">Mapas</Link>
+          <Link to="/pontos">Pontos</Link>
           <Link to="/linhas">Linhas</Link>
           <Link to="/favoritos">Favoritos</Link>
           {nomeUsuario && <span className={styles.cabecalhoUsuario}>{nomeUsuario}</span>}
