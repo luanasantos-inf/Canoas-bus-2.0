@@ -16,6 +16,8 @@ cd nome-do-repositorio
 
 # 3. Instale as dependências
 npm install
+npm install react-icons
+
 
 # 4. Configure as variáveis de ambiente (opcional)
 # Renomeie o arquivo .env.example para .env e preencha com suas chaves
