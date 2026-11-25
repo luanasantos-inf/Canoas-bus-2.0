@@ -5,38 +5,48 @@ import { Rodape } from '../components/Rodape';
 import styles from './PontosPage.module.css'
 
 export function PontosPage() {
-    return (
-        <div className={styles.paginaPontosWrapper}>
+  return (
+    <div className={styles.paginaPontosWrapper}>
 
-            <Cabecalho variante="usuario" />
-            <main class={styles.mainPontos}>
+      <Cabecalho variante="usuario" />
+      <main class={styles.mainPontos}>
 
-                <h1 class={styles.titulo}>Pontos de ônibus</h1>
-                <p class={styles.conteudoDescricao}>
-                    Encontre os locais de embarque e favorite os que você mais usa.
-                </p>
+        <aside className={styles.breadcrumbContainer}>
+          <nav aria-label="breadcrumb">
+            <ol className={styles.breadcrumb}>
+              <li><a href="#">Minha conta</a></li>
+              <li><a href="#">Pontos</a></li>
+            </ol>
+          </nav>
 
-      <div class={styles.barraBusca}>
-        <div class={styles.campoBusca}>
-          <input
-            type="search"
-            id="busca"
-            placeholder="Buscar nome ou endereço"
-            aria-label="Buscar ponto por nome ou endereço"
-          />
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <h1 className={styles.dadosTitulo}>Meu perfil</h1>
+          <span className={styles.dadosSubtitulo}>Seus dados, sempre em dia.</span>
+        </aside>
+        <p class={styles.conteudoDescricao}>
+          Encontre os locais de embarque e favorite os que você mais usa.
+        </p>
+
+        <div class={styles.barraBusca}>
+          <div class={styles.campoBusca}>
+            <input
+              type="search"
+              id="busca"
+              placeholder="Buscar nome ou endereço"
+              aria-label="Buscar ponto por nome ou endereço"
+            />
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </div>
+          <p class={styles.contador} id="contador" aria-live="polite"></p>
         </div>
-        <p class={styles.contador} id="contador" aria-live="polite"></p>
-      </div>
 
-      <div class={styles.gradeCartoes} id="grade-pontos"></div>
-      <p class={styles.vazio} id="mensagem-vazia" hidden>Nenhum ponto encontrado.</p>
-      <button type="button" class={styles.botaoMais} id="mostrar-mais" hidden>
-        Mostrar mais
-      </button>
-    </main >
-        <Rodape />
+        <div class={styles.gradeCartoes} id="grade-pontos"></div>
+        <p class={styles.vazio} id="mensagem-vazia" hidden>Nenhum ponto encontrado.</p>
+        <button type="button" class={styles.botaoMais} id="mostrar-mais" hidden>
+          Mostrar mais
+        </button>
+      </main >
+      <Rodape />
     </div >
-);
+  );
 }
 export default PontosPage;

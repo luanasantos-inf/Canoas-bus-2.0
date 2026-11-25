@@ -8,3 +8,53 @@
     min-height: 100vh;
     font-family: var(--fonte-global);
 }
+
+.mainPontos{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mainDados {
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 3rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+
+.breadcrumbContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.breadcrumb a {
+  color: var(--cor-laranja-primario);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--cor-laranja-hover);
+}
+
+ .dados-titulo {
+    font-size: 1.5rem;
+  }
