@@ -1,6 +1,9 @@
+import { Link, useNavigate } from 'react-router-dom';
 import { Cabecalho } from '../../components/Cabecalho';
 import { Rodape } from '../../components/Rodape';
 import styles from './LinhasPage.module.css';
+import { HiMagnifyingGlass } from "react-icons/hi2";
+import { IoMdPin } from "react-icons/io";
 
 export function LinhasPage() {
     return (
@@ -8,32 +11,34 @@ export function LinhasPage() {
             <Cabecalho variante="usuario" />
 
             <main className={styles.mainLinhas}>
-                <p className={styles.conteudoTrilha}>ADMINISTRAÇÃO / LINHAS</p>
+                <aside className={styles.breadcrumbContainer}>
+                    <nav aria-label="breadcrumb">
+                        <ol className={styles.breadcrumb}>
+                            <li><Link to="/dadoscadastro">Meu cadastro</Link></li>
+                            <li aria-current="page">Linhas</li>
+                        </ol>
+                    </nav>
+                </aside>
 
                 <div className={styles.conteudoCabecalho}>
                     <div>
-                        <h1 className={styles.conteudoTitulo}>Linhas de ônibus</h1>
+                        <h1 className={styles.dadosTitulo}>Linhas de ônibus</h1>
                         <p className={styles.conteudoDescricao}>
                             Organize as linhas e seus itinerários.
                         </p>
                     </div>
-                    <a className={styles.botaoPrincipal} href="nova-linha.html">
-                        <i className="fa-solid fa-plus" aria-hidden="true"></i> Nova linha
-                    </a>
                 </div>
 
-                <p className={styles.avisoSucesso} id="aviso" role="status"></p>
                 <div className={styles.barraBusca}>
                     <div className={styles.campoBusca}>
                         <input
                             type="search"
                             id="busca"
-                            placeholder="Buscar número ou nome"
-                            aria-label="Buscar linha por número ou nome"
+                            placeholder="Buscar nome ou número"
+                            aria-label="Buscar linha por nome ou número"
                         />
-                        <i className="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <HiMagnifyingGlass size={18} aria-hidden="true" />
                     </div>
-                    <p className={styles.contador} id="contador" aria-live="polite"></p>
                 </div>
 
 

@@ -1,0 +1,116 @@
+.paginaLinhasWrapper .paginaLinhasWrapper * {
+  box-sizing: border-box;
+}
+
+.paginaLinhasWrapper {
+  background-color:var(--background-corpo);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--fonte-global);
+}
+
+.mainLinhas {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 3rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.breadcrumbContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.breadcrumb li{
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:first-child)::before {
+  content: "/";
+  display: inline-block;
+  margin: 0 10px;
+  color: var(--detalhes);
+  font-weight: 400;
+}
+
+.breadcrumb a {
+  color: var(--detalhes);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--cor-laranja-hover);
+}
+
+.breadcrumb li[aria-current="page"]{
+  color:var(--detalhes);
+  font-weight: 600;
+}
+
+.dadosTitulo{
+  color:var(--titulos-textos);
+  margin-bottom: 1rem;
+}
+.conteudoDescricao{
+color:var(--detalhes);
+}
+
+.barraBusca {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 480px;
+  background-color:var(--background-corpo);
+}
+
+.campoBusca {
+  display: flex;
+  position:relative;
+  align-items: center;
+  width: 100%;
+}
+
+.campoBusca input {
+  width:100%;
+  background-color: transparent;
+  border: 1px solid var(--detalhes);
+  border-radius: 12px;
+  outline: none;
+  width: 100%;
+  padding: 0.5em;
+  color:var(--detalhes);
+  font-size: 1rem;
+  padding: 10px 40px 10px 14px;
+}
+
+.campoBusca svg {
+  position:absolute;
+  right: 1rem;
+  color: var(--detalhes);
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
