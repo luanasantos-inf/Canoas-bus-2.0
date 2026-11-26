@@ -273,6 +273,7 @@
 }
 
 .botaoExcluir {
+  all: unset;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -290,25 +291,16 @@
   background-color: var(--cor-vermelho-hover);
 }
 
-
-.modalCheckbox {
-  display: none;
-}
-
 .modalOverlay {
   position: fixed;
   inset: 0;
   background-color: rgba(15, 23, 42, 0.65);
-  display: none;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   z-index: 1000;
 }
 
-.modalOverlay:checked ~ .modalOverlay {
-  display: flex;
-}
 
 .modalContainer{
   width: 100%;
