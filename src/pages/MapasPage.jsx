@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Cabecalho } from '../components/Cabecalho';
@@ -60,7 +59,7 @@ export function MapasPage() {
     return (
         <div className={styles.paginaMapasWrapper}>
             <Cabecalho variante="usuario" />
-            <main className={mapaArea}>
+            <main className={styles.mapaArea}>
                 {/* 4. Liga esta div ao useRef */}
                 <div
                     id="mapa"
@@ -86,7 +85,7 @@ export function MapasPage() {
                 {pontoSelecionado && (
                     <section
                         id="detalhes-ponto"
-                        className={mapaDetalhes}
+                        className={styles.mapaDetalhes}
                         aria-labelledby="nome-ponto"
                     >
                         <button
