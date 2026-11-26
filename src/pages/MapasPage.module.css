@@ -4,7 +4,7 @@
   min-height: 0;
 }
 
-.pagina-mapa .mapa-area {
+.paginaMapasWrapper .mapaArea {
   position: relative;
   isolation: isolate;
 
@@ -21,8 +21,8 @@
   z-index: 0;
 }
 
-.mapa-busca,
-.mapa-detalhes {
+.mapaBusca,
+.mapaDetalhes {
   position: absolute;
   z-index: 1;
 
@@ -34,34 +34,34 @@
   box-shadow: 0 4px 20px #00000014;
 }
 
-.mapa-busca {
+.mapaBusca {
   top: 24px;
   left: 24px;
 }
 
-.mapa-detalhes {
+.mapaDetalhes {
   right: 24px;
   bottom: 40px;
 }
 
-.mapa-detalhes[hidden] {
+.mapaDetalhes[hidden] {
   display: none;
 }
 
-.mapa-busca h2,
-.mapa-detalhes h2 {
+.mapaBusca h2,
+.mapaDetalhes h2 {
   font-size: 20px;
 }
 
 @media (max-width: 767px) {
-  .mapa-busca {
+  .mapaBusca {
     top: 12px;
     left: 12px;
     right: 12px;
     width: auto;
   }
 
-  .mapa-detalhes {
+  .mapaDetalhes {
     left: 0;
     right: 0;
     bottom: 0;
@@ -69,7 +69,7 @@
     border-radius: 16px 16px 0 0;
   }
 
-  .mapa-area:has(.mapa-detalhes:not([hidden]))
+  .mapaArea:has(.mapaDetalhes:not([hidden]))
     .leaflet-bottom {
     bottom: var(--altura-painel, 200px);
   }

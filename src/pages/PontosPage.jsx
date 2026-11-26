@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
 import styles from './PontosPage.module.css'
@@ -9,7 +7,7 @@ export function PontosPage() {
     <div className={styles.paginaPontosWrapper}>
 
       <Cabecalho variante="usuario" />
-      <main class={styles.mainPontos}>
+      <main className={styles.mainPontos}>
 
         <aside className={styles.breadcrumbContainer}>
           <nav aria-label="breadcrumb">
@@ -22,26 +20,26 @@ export function PontosPage() {
           <h1 className={styles.dadosTitulo}>Meu perfil</h1>
           <span className={styles.dadosSubtitulo}>Seus dados, sempre em dia.</span>
         </aside>
-        <p class={styles.conteudoDescricao}>
+        <p className={styles.conteudoDescricao}>
           Encontre os locais de embarque e favorite os que você mais usa.
         </p>
 
-        <div class={styles.barraBusca}>
-          <div class={styles.campoBusca}>
+        <div className={styles.barraBusca}>
+          <div className={styles.campoBusca}>
             <input
               type="search"
               id="busca"
               placeholder="Buscar nome ou endereço"
               aria-label="Buscar ponto por nome ou endereço"
             />
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <i className="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
           </div>
-          <p class={styles.contador} id="contador" aria-live="polite"></p>
+          <p className={styles.contador} id="contador" aria-live="polite"></p>
         </div>
 
-        <div class={styles.gradeCartoes} id="grade-pontos"></div>
-        <p class={styles.vazio} id="mensagem-vazia" hidden>Nenhum ponto encontrado.</p>
-        <button type="button" class={styles.botaoMais} id="mostrar-mais" hidden>
+        <div className={styles.gradeCartoes} id="grade-pontos"></div>
+        <p className={styles.vazio} id="mensagem-vazia" hidden>Nenhum ponto encontrado.</p>
+        <button type="button" className={styles.botaoMais} id="mostrar-mais" hidden>
           Mostrar mais
         </button>
       </main >
