@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
-import styles from'./LoginPage.module.css';
+import styles from './LoginPage.module.css';
+import { FaEye, FaEyeSlash} from "react-icons/fa";
+
 
 export function LoginPage() {
   const [mostrarSenha, setMostrarSenha] = useState(false);
@@ -29,7 +31,7 @@ export function LoginPage() {
   }
 
   return (
-    
+
     <div className={styles.paginaLoginWrapper}>
       <Cabecalho variante="publico" />
 
@@ -89,10 +91,12 @@ export function LoginPage() {
                   aria-pressed={mostrarSenha}
                   onClick={alternarVisibilidadeSenha}
                 >
-                  <i
-                    className={`fa-solid ${mostrarSenha ? 'fa-eye-slash' : 'fa-eye'}`}
-                    aria-hidden="true"
-                  ></i>
+                  {mostrarSenha ? (
+                    <FaEyeSlash size={18} aria-hidden="true" />
+                  ) : (
+                    <FaEye size={18} aria-hidden="true" />
+                  )}
+
                 </button>
               </div>
             </div>
