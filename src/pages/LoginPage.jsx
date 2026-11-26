@@ -5,7 +5,6 @@ import { Rodape } from '../components/Rodape';
 import styles from  './LoginPage.module.css';
 import percursoLight from '../assets/percurso-ilustrativo.png';
 import percursoDark from '../assets/percurso-ilustrativo-dark.png';
-
 import { FaEye, FaEyeSlash} from "react-icons/fa";
 
 

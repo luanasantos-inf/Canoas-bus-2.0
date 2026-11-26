@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
 import styles from './CriarContaPage.module.css';
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 import percursoLight from '../assets/percurso-ilustrativo.png';
 import percursoDark from '../assets/percurso-ilustrativo-dark.png';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export function CriarContaPage() {
   const [mostrarSenha, setMostrarSenha] = useState(false);
@@ -96,7 +97,7 @@ export function CriarContaPage() {
             </form>
 
             <p className={styles.mudarEntrada}>
-              Já tem uma conta? <a href="index.html">Entrar</a>
+              Já tem uma conta? <Link to="/">Entrar</Link>
             </p>
           </div>
       </main>
