@@ -1,64 +1,47 @@
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
+import percursoLight from '../assets/percurso-ilustrativo.png';
+import percursoDark from '../assets/percurso-ilustrativo-dark.png';
 import styles from './DadosCadastroPage.module.css';
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export function DadosCadastroPage() {
-
   const [nome, setNome] = useState('Marina Oliveira');
   const [email, setEmail] = useState('marina@email.com');
   const [senha, setSenha] = useState('');
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const [salvo, setSalvo] = useState(false);
+  const [modalAberto, setModalAberto] = useState(false);
+  const navigate = useNavigate();
 
   function lidarComSubmit(event) {
     event.preventDefault();
     setSalvo(true);
   }
 
-  const [modalAberto, setModalAberto] = useState(false);
-  const navigate = useNavigate();
-
   function handleConfirmarExclusao() {
     setModalAberto(false);
-    navigate("/");
+    navigate('/');
   }
 
   return (
     <div className={styles.paginaDadosCadastroWrapper}>
       <Cabecalho variante="usuario" />
-    <div className={styles.paginaDadosCadastroWrapper}>
-      <Cabecalho variante="usuario" />
 
       <main className={styles.mainDados}>
         <aside className={styles.dadosCabecalhoContainer}>
           <nav aria-label="breadcrumb">
             <ol className={styles.breadcrumb}>
-              <li><a href="#">Minha conta</a></li>
-            </ol>
-          </nav>
-      <main className={styles.mainDados}>
-        <aside className={styles.dadosCabecalhoContainer}>
-          <nav aria-label="breadcrumb">
-            <ol className={styles.breadcrumb}>
-              <li><a href="#">Minha conta</a></li>
+              <li><a href="#perfil">Minha conta</a></li>
             </ol>
           </nav>
 
           <h1 className={styles.dadosTitulo}>Meu perfil</h1>
           <span className={styles.dadosSubtitulo}>Seus dados, sempre em dia.</span>
         </aside>
-          <h1 className={styles.dadosTitulo}>Meu perfil</h1>
-          <span className={styles.dadosSubtitulo}>Seus dados, sempre em dia.</span>
-        </aside>
 
-        <form className={styles.formulario} id="form-perfil" onSubmit={lidarComSubmit} noValidate>
-          <section className={styles.principalDados}>
-            <div className={styles.secaoDados}>
-              <h2>Dados pessoais</h2>
-              <span>Atualize suas informações de acesso.</span>
         <form className={styles.formulario} id="form-perfil" onSubmit={lidarComSubmit} noValidate>
           <section className={styles.principalDados}>
             <div className={styles.secaoDados}>
@@ -72,17 +55,7 @@ export function DadosCadastroPage() {
                   id="nome"
                   name="nome"
                   value={nome}
-                  onChange={(e) => setNome(e.target.value)}
-                />
-              </div>
-              <div className={styles.campoPreenchimento}>
-                <label htmlFor="nome">Nome completo</label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  value={nome}
-                  onChange={(e) => setNome(e.target.value)}
+                  onChange={(event) => setNome(event.target.value)}
                 />
               </div>
 
@@ -93,17 +66,7 @@ export function DadosCadastroPage() {
                   id="e-mail"
                   name="e-mail"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              <div className={styles.campoPreenchimento}>
-                <label htmlFor="e-mail">E-mail</label>
-                <input
-                  type="email"
-                  id="e-mail"
-                  name="e-mail"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(event) => setEmail(event.target.value)}
                 />
               </div>
 
@@ -115,7 +78,7 @@ export function DadosCadastroPage() {
                     id="senha"
                     name="senha"
                     value={senha}
-                    onChange={(e) => setSenha(e.target.value)}
+                    onChange={(event) => setSenha(event.target.value)}
                     placeholder="Crie uma senha"
                     autoComplete="new-password"
                     aria-describedby="requisito"
@@ -125,7 +88,7 @@ export function DadosCadastroPage() {
                     className={styles.botaoMostrarSenha}
                     type="button"
                     aria-label={mostrarSenha ? 'Ocultar senha' : 'Mostrar senha'}
-                    onClick={() => setMostrarSenha((prev) => !prev)}
+                    onClick={() => setMostrarSenha((estadoAtual) => !estadoAtual)}
                   >
                     {mostrarSenha ? (
                       <FaEyeSlash size={18} aria-hidden="true" />
@@ -139,27 +102,12 @@ export function DadosCadastroPage() {
                 </p>
               </div>
 
-              <div className={styles.acoesformulario}>
+              <div className={styles.acoesFormulario}>
                 <button className={styles.botaoSalvar} type="submit">Salvar alterações</button>
                 {salvo && <div className={styles.statusAtualizado}>Dados atualizados</div>}
               </div>
-
-            </div>
             </div>
 
-            <div className={styles.secaoFrase}>
-              <h3>Uma conta, toda a cidade.</h3>
-              <p>
-                Seu perfil é usado para acessar o mapa e consultar as linhas e os
-                pontos de Canoas.
-              </p>
-              <img
-                className={styles.apresentacaoImagem}
-                src="../../src/assets/percurso-ilustrativo.svg"
-                alt="Ilustração de transporte público em Canoas"
-              />
-            </div>
-          </section>
             <div className={styles.secaoFrase}>
               <h3>Uma conta, toda a cidade.</h3>
               <p>
@@ -178,7 +126,6 @@ export function DadosCadastroPage() {
               />
             </div>
           </section>
-
         </form>
 
         <div className={styles.secaoExcluir}>
@@ -203,7 +150,7 @@ export function DadosCadastroPage() {
               >
                 <div
                   className={styles.modalContainer}
-                  onClick={(e) => e.stopPropagation()}
+                  onClick={(event) => event.stopPropagation()}
                 >
                   <h2>Excluir sua conta?</h2>
                   <p>
@@ -233,10 +180,9 @@ export function DadosCadastroPage() {
             )}
           </div>
         </div>
-
-      </main >
+      </main>
 
       <Rodape />
-    </div >
+    </div>
   );
 }

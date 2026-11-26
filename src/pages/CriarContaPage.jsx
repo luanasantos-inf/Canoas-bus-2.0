@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
 import styles from './CriarContaPage.module.css';
@@ -6,6 +7,8 @@ import percursoLight from '../assets/percurso-ilustrativo.png';
 import percursoDark from '../assets/percurso-ilustrativo-dark.png';
 
 export function CriarContaPage() {
+  const [mostrarSenha, setMostrarSenha] = useState(false);
+
   return (
 
     <div className={styles.paginaCriarContaWrapper}>
@@ -34,55 +37,46 @@ export function CriarContaPage() {
           <h2>Crie sua conta</h2>
           <p className={styles.fraseApoio}>Sua próxima viagem começa com um cadastro.</p>
 
-          <form className={styles.formulario} id="form-cadastro" action="" novalidate>
+          <form className={styles.formulario} id="form-cadastro" action="" noValidate>
             <div className={styles.campoPreenchimento}>
-              <label for="nome">Nome completo</label>
+              <label htmlFor="nome">Nome completo</label>
               <input
                 type="text"
                 id="nome"
                 name="nome"
                 placeholder="Marina Oliveira"
-                autocomplete="name"
+                autoComplete="name"
               />
             </div>
 
             <div className={styles.campoPreenchimento}>
-              <label for="e-mail">E-mail</label>
+              <label htmlFor="e-mail">E-mail</label>
               <input
                 type="email"
                 id="e-mail"
                 name="e-mail"
                 placeholder="seu@email.com"
-                autocomplete="email"
-              />
-            </div>
-            <div className={styles.campoPreenchimento}>
-              <label for="e-mail">E-mail</label>
-              <input
-                type="email"
-                id="e-mail"
-                name="e-mail"
-                placeholder="seu@email.com"
-                autocomplete="email"
+                autoComplete="email"
               />
             </div>
 
             <div className={styles.campoPreenchimento}>
-              <label for="senha">Senha</label>
+              <label htmlFor="senha">Senha</label>
               <div className={styles.campoPreenchimentoSenha}>
                 <input
-                  type="password"
+                  type={mostrarSenha ? 'text' : 'password'}
                   id="senha"
                   name="senha"
                   placeholder="Crie uma senha"
-                  autocomplete="new-password"
+                  autoComplete="new-password"
                   aria-describedby="requisito"
-                  minlength="8"
+                  minLength={8}
                 />
                 <button
                   className={styles.botaoMostrarSenha}
                   type="button"
                   aria-label="Mostrar senha"
+                  onClick={() => setMostrarSenha((estadoAtual) => !estadoAtual)}
                 >
                   {mostrarSenha ? (
                     <FaEyeSlash size={18} aria-hidden="true" />
@@ -95,7 +89,6 @@ export function CriarContaPage() {
             </div>
 
             <p id="mensagem" className={styles.mensagem} role="alert"></p>
-            <p id="mensagem" className={styles.mensagem} role="alert"></p>
 
               <button className={styles.btnCadastrar} type="submit">
                 Criar conta
@@ -107,8 +100,6 @@ export function CriarContaPage() {
             </p>
           </div>
       </main>
-      <Rodape />
-
       <Rodape />
 
     </div>
