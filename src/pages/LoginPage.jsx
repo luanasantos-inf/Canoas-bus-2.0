@@ -2,7 +2,10 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
-import styles from './LoginPage.module.css';
+import styles from  './LoginPage.module.css';
+import percursoLight from '../assets/percurso-ilustrativo.png';
+import percursoDark from '../assets/percurso-ilustrativo-dark.png';
+
 import { FaEye, FaEyeSlash} from "react-icons/fa";
 
 
@@ -43,10 +46,16 @@ export function LoginPage() {
             Encontre linhas e pontos de ônibus e explore Canoas com mais facilidade.
           </p>
           <img
-            className={styles.apresentacaoImagem}
-            src="../../src/assets/percurso-ilustrativo.svg"
+            className={`${styles.apresentacaoImagem} imgLight`}
+            src={percursoLight}
             alt="Ilustração de transporte público em Canoas"
           />
+          <img
+            className={`${styles.apresentacaoImagem} imgDark`}
+            src={percursoDark}
+            alt="Ilustração de transporte público em Canoas"
+          />
+
         </aside>
 
         <div className={styles.recepcaoFormulario}>

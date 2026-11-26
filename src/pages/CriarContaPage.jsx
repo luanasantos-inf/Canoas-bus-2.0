@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
 import styles from './CriarContaPage.module.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import percursoLight from '../assets/percurso-ilustrativo.png';
+import percursoDark from '../assets/percurso-ilustrativo-dark.png';
 
 export function CriarContaPage() {
   return (
@@ -19,9 +19,14 @@ export function CriarContaPage() {
             facilidade.
           </p>
           <img
-            className={styles.apresentacaoImagem}
-            src="../../src/assets/percurso-ilustrativo.svg"
-            alt=""
+            className={`${styles.apresentacaoImagem} imgLight`}
+            src={percursoLight}
+            alt="Ilustração de transporte público em Canoas"
+          />
+          <img
+            className={`${styles.apresentacaoImagem} imgDark`}
+            src={percursoDark}
+            alt="Ilustração de transporte público em Canoas"
           />
         </aside>
 
@@ -41,6 +46,16 @@ export function CriarContaPage() {
               />
             </div>
 
+            <div className={styles.campoPreenchimento}>
+              <label for="e-mail">E-mail</label>
+              <input
+                type="email"
+                id="e-mail"
+                name="e-mail"
+                placeholder="seu@email.com"
+                autocomplete="email"
+              />
+            </div>
             <div className={styles.campoPreenchimento}>
               <label for="e-mail">E-mail</label>
               <input
@@ -80,17 +95,20 @@ export function CriarContaPage() {
             </div>
 
             <p id="mensagem" className={styles.mensagem} role="alert"></p>
+            <p id="mensagem" className={styles.mensagem} role="alert"></p>
 
-            <button className={styles.btnCadastrar} type="submit">
-              Criar conta
-            </button>
-          </form>
+              <button className={styles.btnCadastrar} type="submit">
+                Criar conta
+              </button>
+            </form>
 
-          <p className={styles.mudarEntrada}>
-            Já tem uma conta? <a href="index.html">Entrar</a>
-          </p>
-        </div>
+            <p className={styles.mudarEntrada}>
+              Já tem uma conta? <a href="index.html">Entrar</a>
+            </p>
+          </div>
       </main>
+      <Rodape />
+
       <Rodape />
 
     </div>

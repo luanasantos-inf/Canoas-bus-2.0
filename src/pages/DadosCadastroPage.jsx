@@ -29,7 +29,16 @@ export function DadosCadastroPage() {
   return (
     <div className={styles.paginaDadosCadastroWrapper}>
       <Cabecalho variante="usuario" />
+    <div className={styles.paginaDadosCadastroWrapper}>
+      <Cabecalho variante="usuario" />
 
+      <main className={styles.mainDados}>
+        <aside className={styles.dadosCabecalhoContainer}>
+          <nav aria-label="breadcrumb">
+            <ol className={styles.breadcrumb}>
+              <li><a href="#">Minha conta</a></li>
+            </ol>
+          </nav>
       <main className={styles.mainDados}>
         <aside className={styles.dadosCabecalhoContainer}>
           <nav aria-label="breadcrumb">
@@ -41,7 +50,15 @@ export function DadosCadastroPage() {
           <h1 className={styles.dadosTitulo}>Meu perfil</h1>
           <span className={styles.dadosSubtitulo}>Seus dados, sempre em dia.</span>
         </aside>
+          <h1 className={styles.dadosTitulo}>Meu perfil</h1>
+          <span className={styles.dadosSubtitulo}>Seus dados, sempre em dia.</span>
+        </aside>
 
+        <form className={styles.formulario} id="form-perfil" onSubmit={lidarComSubmit} noValidate>
+          <section className={styles.principalDados}>
+            <div className={styles.secaoDados}>
+              <h2>Dados pessoais</h2>
+              <span>Atualize suas informações de acesso.</span>
         <form className={styles.formulario} id="form-perfil" onSubmit={lidarComSubmit} noValidate>
           <section className={styles.principalDados}>
             <div className={styles.secaoDados}>
@@ -58,7 +75,27 @@ export function DadosCadastroPage() {
                   onChange={(e) => setNome(e.target.value)}
                 />
               </div>
+              <div className={styles.campoPreenchimento}>
+                <label htmlFor="nome">Nome completo</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                />
+              </div>
 
+              <div className={styles.campoPreenchimento}>
+                <label htmlFor="e-mail">E-mail</label>
+                <input
+                  type="email"
+                  id="e-mail"
+                  name="e-mail"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
               <div className={styles.campoPreenchimento}>
                 <label htmlFor="e-mail">E-mail</label>
                 <input
@@ -108,6 +145,7 @@ export function DadosCadastroPage() {
               </div>
 
             </div>
+            </div>
 
             <div className={styles.secaoFrase}>
               <h3>Uma conta, toda a cidade.</h3>
@@ -118,6 +156,24 @@ export function DadosCadastroPage() {
               <img
                 className={styles.apresentacaoImagem}
                 src="../../src/assets/percurso-ilustrativo.svg"
+                alt="Ilustração de transporte público em Canoas"
+              />
+            </div>
+          </section>
+            <div className={styles.secaoFrase}>
+              <h3>Uma conta, toda a cidade.</h3>
+              <p>
+                Seu perfil é usado para acessar o mapa e consultar as linhas e os
+                pontos de Canoas.
+              </p>
+              <img
+                className={`${styles.apresentacaoImagem} imgLight`}
+                src={percursoLight}
+                alt="Ilustração de transporte público em Canoas"
+              />
+              <img
+                className={`${styles.apresentacaoImagem} imgDark`}
+                src={percursoDark}
                 alt="Ilustração de transporte público em Canoas"
               />
             </div>
