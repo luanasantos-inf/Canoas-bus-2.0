@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Cabecalho } from '../components/Cabecalho';
-import { Rodape } from '../components/Rodape';
+import { Cabecalho } from '../../components/Cabecalho';
+import { Rodape } from '../../components/Rodape';
 import styles from './CriarContaPage.module.css';
-import percursoLight from '../assets/percurso-ilustrativo.png';
-import percursoDark from '../assets/percurso-ilustrativo-dark.png';
+import percursoLight from '../../assets/percurso-ilustrativo.png';
+import percursoDark from '../../assets/percurso-ilustrativo-dark.png';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export function CriarContaPage() {

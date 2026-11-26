@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
-import { LoginPage } from './pages/LoginPage';
-import { CriarContaPage } from './pages/CriarContaPage';
-import { DadosCadastroPage } from './pages/DadosCadastroPage';
-import { FavoritosPage } from './pages/FavoritosPage';
-import { LinhasPage } from './pages/LinhasPage';
-import { PontosPage } from './pages/PontosPage';
-import { MapasPage } from './pages/MapasPage.jsx';
+import { LoginPage } from './pages/public/LoginPage.jsx'
+import { CriarContaPage } from './pages/public/CriarContaPage.jsx';
+import { DadosCadastroPage } from './pages/usuario/DadosCadastroPage.jsx';
+import { FavoritosPage } from './pages/usuario/FavoritosPage.jsx';
+import { LinhasPage } from './pages/usuario/LinhasPage.jsx';
+import { PontosPage } from './pages/usuario/PontosPage.jsx';
+import { MapasPage } from './pages/usuario/MapasPage.jsx';
 
 import './global.css';
 

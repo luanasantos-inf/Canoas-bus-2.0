@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { Cabecalho } from '../components/Cabecalho';
-import { Rodape } from '../components/Rodape';
+import { Cabecalho } from '../../components/Cabecalho';
+import { Rodape } from '../../components/Rodape';
 import styles from './MapasPage.module.css';
 
 const PONTOS_EXEMPLO = [

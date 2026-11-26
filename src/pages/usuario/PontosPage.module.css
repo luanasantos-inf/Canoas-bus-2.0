@@ -1,21 +1,17 @@
 .paginaPontosWrapper .paginaPontosWrapper * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .paginaPontosWrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: var(--fonte-global);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--fonte-global);
 }
 
-.mainPontos{
-    display: flex;
-    flex-direction: column;
-}
-
-
-.mainDados {
+.mainPontos {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   width: 100%;
   max-width: 1280px;
@@ -55,6 +51,7 @@
   color: var(--cor-laranja-hover);
 }
 
- .dados-titulo {
-    font-size: 1.5rem;
-  }
+.dados-titulo {
+  font-size: 1.5rem;
+}
+

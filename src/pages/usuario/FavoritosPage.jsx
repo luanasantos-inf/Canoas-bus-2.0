@@ -1,5 +1,5 @@
-import { Cabecalho } from '../components/Cabecalho';
-import { Rodape } from '../components/Rodape';
+import { Cabecalho } from '../../components/Cabecalho';
+import { Rodape } from '../../components/Rodape';
 import styles from './FavoritosPage.module.css';
 
 export function FavoritosPage() {

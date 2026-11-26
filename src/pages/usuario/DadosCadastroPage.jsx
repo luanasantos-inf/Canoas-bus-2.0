@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Cabecalho } from '../components/Cabecalho';
-import { Rodape } from '../components/Rodape';
-import percursoLight from '../assets/percurso-ilustrativo.png';
-import percursoDark from '../assets/percurso-ilustrativo-dark.png';
+import { Cabecalho } from '../../components/Cabecalho';
+import { Rodape } from '../../components/Rodape';
+import percursoLight from '../../assets/percurso-ilustrativo.png'
+import percursoDark from '../../assets/percurso-ilustrativo-dark.png';
 import styles from './DadosCadastroPage.module.css';
 
 export function DadosCadastroPage() {
