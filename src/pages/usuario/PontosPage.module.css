@@ -3,6 +3,7 @@
 }
 
 .paginaPontosWrapper {
+  background-color: var(--background-corpo);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -25,6 +26,7 @@
 
 .breadcrumbContainer {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 0.35rem;
 }
@@ -42,8 +44,21 @@
   text-transform: uppercase;
 }
 
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:first-child)::before {
+  content: "/";
+  display: inline-block;
+  margin: 0 10px;
+  color: var(--detalhes);
+  font-weight: 400;
+}
+
 .breadcrumb a {
-  color: var(--cor-laranja-primario);
+  color: var(--detalhes);
   text-decoration: none;
 }
 
@@ -51,7 +66,158 @@
   color: var(--cor-laranja-hover);
 }
 
-.dados-titulo {
-  font-size: 1.5rem;
+.breadcrumb li[aria-current="page"] {
+  color: var(--detalhes);
+  font-weight: 600;
 }
 
+
+.dadosTitulo {
+  color: var(--titulos-textos);
+}
+
+.conteudoDescricao {
+  color: var(--detalhes);
+}
+
+.barraBusca {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--background-corpo);
+}
+
+.campoBusca {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.campoBusca input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--detalhes);
+  border-radius: 12px;
+  outline: none;
+  width: 100%;
+  padding: 0.5em;
+  color: var(--detalhes);
+  font-size: 1rem;
+  padding: 10px 40px 10px 14px;
+}
+
+.campoBusca svg {
+  position: absolute;
+  right: 1rem;
+  color: var(--detalhes);
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.contador {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--detalhes);
+  padding-left: 4px;
+  min-height: 20px;
+}
+
+.gradeCartoes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1.5rem;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.cabecalhoLista {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 120px;
+  align-items: center;
+  padding: 14px 24px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--detalhes);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--detalhes);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cabecalhoLista span:last-child {
+  text-align: right;
+}
+
+.cartaoPonto {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 120px;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--detalhes);
+  transition: background-color 0.15s ease;
+}
+
+.cartaoPonto:last-child {
+  border-bottom: none;
+}
+
+.cartaoPonto:hover {
+  background-color: var(--cor-laranja-hover);
+}
+
+
+.infoPonto {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconeLocal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--cor-laranja-primario);
+  flex-shrink: 0;
+}
+
+.textoPonto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nomePonto {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--titulos-textos);
+}
+
+.enderecoPonto {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--detalhes);
+}
+
+.listaLinhas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badgeLinha {
+  background-color: var(--background-apresentacao);
+  color: var(--cor-laranja-primario);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
