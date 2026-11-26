@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
 import styles from './FavoritosPage.module.css';
