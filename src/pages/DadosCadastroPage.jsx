@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { Cabecalho } from '../components/Cabecalho';
 import { Rodape } from '../components/Rodape';
 import styles from './DadosCadastroPage.module.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-
 export function DadosCadastroPage() {
+
   const [nome, setNome] = useState('Marina Oliveira');
   const [email, setEmail] = useState('marina@email.com');
   const [senha, setSenha] = useState('');
@@ -15,6 +16,14 @@ export function DadosCadastroPage() {
   function lidarComSubmit(event) {
     event.preventDefault();
     setSalvo(true);
+  }
+
+  const [modalAberto, setModalAberto] = useState(false);
+  const navigate = useNavigate();
+
+  function handleConfirmarExclusao() {
+    setModalAberto(false);
+    navigate("/");
   }
 
   return (
@@ -82,10 +91,10 @@ export function DadosCadastroPage() {
                     onClick={() => setMostrarSenha((prev) => !prev)}
                   >
                     {mostrarSenha ? (
-                    <FaEyeSlash size={18} aria-hidden="true" />
-                  ) : (
-                    <FaEye size={18} aria-hidden="true" />
-                  )}
+                      <FaEyeSlash size={18} aria-hidden="true" />
+                    ) : (
+                      <FaEye size={18} aria-hidden="true" />
+                    )}
                   </button>
                 </div>
                 <p id="requisito" className={styles.campoRequisito}>
@@ -121,35 +130,57 @@ export function DadosCadastroPage() {
             <p>Excluir minha conta</p>
             <span>Esta ação é permanente.</span>
           </div>
+
           <div className={styles.secaoExcluirDireita}>
-            <label htmlFor="modal-toggle" className={styles.botaoExcluir}>Excluir conta</label>
+            <button
+              type="button"
+              className={styles.botaoExcluir}
+              onClick={() => setModalAberto(true)}
+            >
+              Excluir conta
+            </button>
 
-            <input type="checkbox" id="modal-toggle" className={styles.modalCheckbox} />
+            {modalAberto && (
+              <div
+                className={styles.modalOverlay}
+                onClick={() => setModalAberto(false)}
+              >
+                <div
+                  className={styles.modalContainer}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <h2>Excluir sua conta?</h2>
+                  <p>
+                    Seu acesso e seus dados serão removidos. Não é possível desfazer
+                    esta ação.
+                  </p>
 
-            <div className={styles.modalOverlay}>
-              <div className={styles.modalContainer}>
-                <h2>Excluir sua conta?</h2>
-                <p>
-                  Seu acesso e seus dados serão removidos. Não é possível desfazer
-                  esta ação.
-                </p>
+                  <div className={styles.modalBtns}>
+                    <button
+                      type="button"
+                      className={styles.botaoCancelar}
+                      onClick={() => setModalAberto(false)}
+                    >
+                      Cancelar
+                    </button>
 
-                <div className={styles.modalBtns}>
-                  <label htmlFor="modal-toggle" className={styles.botaoCancelar}>
-                    Cancelar
-                  </label>
-
-                  <button type="button" className={styles.botaoConfirmarExclusao}>
-                    Excluir conta
-                  </button>
+                    <button
+                      type="button"
+                      className={styles.botaoConfirmarExclusao}
+                      onClick={handleConfirmarExclusao}
+                    >
+                      Excluir conta
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
-      </main>
+
+      </main >
 
       <Rodape />
-    </div>
+    </div >
   );
 }
