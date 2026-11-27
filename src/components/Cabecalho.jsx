@@ -54,12 +54,13 @@ export function Cabecalho({ variante = 'publico', nomeUsuario }) {
         </nav>
       )}
 
-      {/* Variação 3: Administrador */}
+  
       {variante === 'admin' && (
         <nav className={styles.cabecalhoNavegacao} aria-label="Menu administrativo">
           <span className={styles.cabecalhoBadgeAdmin}>Admin</span>
           <Link to="/admin/linhas">Gerenciar Linhas</Link>
           <Link to="/admin/pontos">Gerenciar Pontos</Link>
+          <Link to="/admin/mapas"> Gerenciar Mapas </Link>
           <button type="button" className={styles.cabecalhoSair}>Sair</button>
         </nav>
       )}
