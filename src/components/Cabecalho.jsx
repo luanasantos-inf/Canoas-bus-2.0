@@ -39,22 +39,22 @@ export function Cabecalho({ variante = 'publico', nomeUsuario }) {
         </button>
       </div>
 
-    
+
       {variante === 'publico' && null}
 
-     
+
       {variante === 'usuario' && (
         <nav className={styles.cabecalhoNavegacao} aria-label="Menu do usuário">
-          <Link to="/mapas">Mapas</Link>
-          <Link to="/pontos">Pontos</Link>
-          <Link to="/linhas">Linhas</Link>
-          <Link to="/favoritos">Favoritos</Link>
+          <Link to="usuario/mapas">Mapas</Link>
+          <Link to="usuario/pontos">Pontos</Link>
+          <Link to="usuario/linhas">Linhas</Link>
+          <Link to="usuario/favoritos">Favoritos</Link>
           {nomeUsuario && <span className={styles.cabecalhoUsuario}>{nomeUsuario}</span>}
           <button type="button" className={styles.cabecalhoSair}>Sair</button>
         </nav>
       )}
 
-  
+
       {variante === 'admin' && (
         <nav className={styles.cabecalhoNavegacao} aria-label="Menu administrativo">
           <span className={styles.cabecalhoBadgeAdmin}>Admin</span>
