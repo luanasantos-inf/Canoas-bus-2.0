@@ -1,11 +1,10 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import styles from './MapasAdm.module.css';
+import {Cabecalho} from '../../components/Cabecalho';
 
 export function MapasAdm() {
   return (
     <div classname={styles.paginaMapasAdmWrapper}>
-    <main className={mainMapaArea}>
+    <main className={styles.mainMapaArea}>
       <Cabecalho variante="admin"/>
       <div id="mapa" aria-label="Mapa de Canoas" />
 
