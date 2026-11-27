@@ -39,8 +39,9 @@ export function AuthProvider({ children }) {
   function loginComo(tipo) {
     const conta = CONTAS_DEV[tipo];
     if (!conta) return null;
-    setUsuario(conta);
-    return conta;
+    const { senha: _, ...dadosSessao } = conta;
+    setUsuario(dadosSessao);
+    return dadosSessao;
   }
 
   function login(email, senha) {

@@ -39,9 +39,9 @@ export function LoginPage() {
     setMensagem('');
 
     if (resultado.usuario.role === 'admin') {
-      navigate('/linhasadm', { replace: true });
+      navigate('admin/linhasadm', { replace: true });
     } else {
-      navigate('/mapas', { replace: true });
+      navigate('usuario/mapas', { replace: true });
     }
   }
 
@@ -81,7 +81,7 @@ export function LoginPage() {
             noValidate
           >
             <div className={styles.campoPreenchimento}>
-              <label htmlFor="e-mail">E-mail</label>
+              <label htmlFor="email">E-mail</label>
               <input
                 type="email"
                 id="email"
