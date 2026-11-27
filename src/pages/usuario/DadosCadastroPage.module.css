@@ -229,9 +229,9 @@
 }
 
 .statusAtualizado {
-  background-color: #f0fdf4;
-  color: #15803d;
-  border: 1px solid #bbf7d0;
+  background-color: var(--cor-verde-claro);
+  color: var(--cor-verde-alerta);
+  border: 1px solid var(--cor-verde-alerta);
   border-radius: 8px;
   padding: 0.6rem 0.95rem;
   font-size: 0.875rem;
@@ -351,7 +351,8 @@
 }
 
 .botaoCancelar:hover {
-  background-color: #f1f5f9;
+  background-color: var(--cor-laranja-hover);
+  border:1px solid var(--cor-laranja-hover);
 }
 
 .botaoConfirmarExclusao{
