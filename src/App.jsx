@@ -48,17 +48,17 @@ export function App() {
         <Route path="/criar-conta" element={<CriarContaPage />} />
 
         <Route element={<Layout variante="usuario" />}>
-          <Route path="/dadoscadastro" element={<DadosCadastroPage />} />
-          <Route path="/favoritos" element={<FavoritosPage />} />
-          <Route path="/linhas" element={<LinhasPage />} />
-          <Route path="/pontos" element={<PontosPage />} />
-          <Route path="/mapas" element={<MapasPage />} />
+          <Route path="/usuario/dadoscadastro" element={<DadosCadastroPage />} />
+          <Route path="/usuario/favoritos" element={<FavoritosPage />} />
+          <Route path="/usuario/linhas" element={<LinhasPage />} />
+          <Route path="/usuario/pontos" element={<PontosPage />} />
+          <Route path="/usuario/mapas" element={<MapasPage />} />
         </Route>
 
         <Route element={<Layout variante="admin" />}>
-          <Route path='/mapasadm' element={<MapasAdm />} />
-          <Route path='/linhasadm' element={<LinhasAdm />} />
-          <Route path='/pontosadm' element={<PontosAdm />} />
+          <Route path="/admin/MapasAdm" element={<MapasAdm />} />
+          <Route path="/admin/linhasadm" element={<LinhasAdm />} />
+          <Route path="/admin/pontosadm" element={<PontosAdm />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />
