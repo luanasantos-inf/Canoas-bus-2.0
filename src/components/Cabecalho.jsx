@@ -58,9 +58,9 @@ export function Cabecalho({ variante = 'publico', nomeUsuario }) {
       {variante === 'admin' && (
         <nav className={styles.cabecalhoNavegacao} aria-label="Menu administrativo">
           <span className={styles.cabecalhoBadgeAdmin}>Admin</span>
-          <Link to="/admin/linhas">Gerenciar Linhas</Link>
-          <Link to="/admin/pontos">Gerenciar Pontos</Link>
-          <Link to="/admin/mapas"> Gerenciar Mapas </Link>
+          <Link to="/admin/linhasadm">Gerenciar Linhas</Link>
+          <Link to="/admin/pontosadm">Gerenciar Pontos</Link>
+          <Link to="/admin/mapasadm"> Gerenciar Mapas </Link>
           <button type="button" className={styles.cabecalhoSair}>Sair</button>
         </nav>
       )}
