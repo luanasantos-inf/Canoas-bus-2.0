@@ -1,32 +1,32 @@
-.paginaCriarContaWrapper,
-.paginaCriarContaWrapper * {
+.paginaLoginWrapper,
+.paginaLoginWrapper * {
   box-sizing: border-box;
 }
 
-.paginaCriarContaWrapper {
+.paginaLoginWrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   font-family: var(--fonte-global);
 }
 
-.mainCriarConta {
+.mainLogin {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   flex: 1;
   gap: 2rem;
   padding: 1.5rem 5%;
-  width: 100%;
-  max-width: 100vw;
+  width: 100vw;
   margin: 0 auto;
-  background-color:var(--background-corpo);
+  background-color: var(--background-corpo);
 }
+
 
 .apresentacao {
   display: flex;
   flex-direction: column;
-  flex: 1 1 40%;
+  flex: 1 1 50%;
   min-width: 0;
   background-color: var(--background-apresentacao);
   border-radius: 1rem;
@@ -66,12 +66,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1 1 40%;
+  flex: 1 1 50%;
   min-width: 0;
   max-width: 32rem;
   width: 100%;
   margin: 0 auto;
-  color:var(--titulos-textos);
+  color: var(--titulos-textos);
 }
 
 .fraseApoio {
@@ -93,6 +93,7 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+  background-color: transparent;
 }
 
 .campoPreenchimento label {
@@ -108,13 +109,22 @@
   border-radius: 12px;
   border: 1px solid var(--detalhes);
   background-color: transparent;
-  color: var(--titulos-textos);
+  color: var(--detalhes);
 }
 
 .campoPreenchimento input:focus {
   outline: none;
   border-color: var(--cor-laranja-primario);
-  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+  box-shadow: var(--sombra);
+}
+
+.campoPreenchimento input::placeholder {
+  color: var(--detalhes);
+  font-size: 0.875rem;
+}
+
+.campoPreenchimento input:required {
+  border-color: var(--cor-vermelho--alerta);
 }
 
 .campoPreenchimentoSenha {
@@ -130,14 +140,14 @@
   padding: 0 2.75rem 0 0.875rem;
   border-radius: 12px;
   border: 1px solid var(--detalhes);
-  background-color:transparent;
-  color: var(--titulos-textos);
+  background-color: transparent;
+  color: var(--detalhes);
 }
 
 .campoPreenchimentoSenha input:focus {
   outline: none;
   border-color: var(--cor-laranja-primario);
-  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+  box-shadow: var(--sombra);
 }
 
 .botaoMostrarSenha {
@@ -163,10 +173,15 @@
 
 .mensagem {
   font-size: 0.875rem;
+  margin-top: 0.1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--cor-vermelho-claro);
   color: var(--cor-vermelho-alerta);
+  border: 1px solid var(--cor-vermelho-alerta);
 }
 
-.btnCadastrar {
+.btnEntrar {
   width: 100%;
   height: 2.5rem;
   padding: 0.625rem;
@@ -187,8 +202,8 @@
 .mudarEntrada {
   font-size: 0.875rem;
   font-weight: var(--fonte-400);
-  color: var(--detalhes);
   padding-top: 1.5rem;
+  color: var(--detalhes);
 }
 
 .mudarEntrada a {
@@ -204,7 +219,7 @@
 
 
 @media (max-width: 899px) {
-  .mainCriarConta {
+  .mainLogin {
     flex-direction: column;
     gap: 1.5rem;
     padding: 1.25rem 1rem;

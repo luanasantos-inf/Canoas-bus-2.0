@@ -39,10 +39,10 @@ export function Cabecalho({ variante = 'publico', nomeUsuario }) {
         </button>
       </div>
 
-      {/* Variação 1: Padrão / Público (Ex: Login e Criar Conta - sem menu extra) */}
+    
       {variante === 'publico' && null}
 
-      {/* Variação 2: Usuário logado */}
+     
       {variante === 'usuario' && (
         <nav className={styles.cabecalhoNavegacao} aria-label="Menu do usuário">
           <Link to="/mapas">Mapas</Link>
