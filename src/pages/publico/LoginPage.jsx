@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from "../../AuthContext";
 import { Cabecalho } from '../../components/Cabecalho';
 import { Rodape } from '../../components/Rodape';
 import styles from  './LoginPage.module.css';
@@ -9,6 +10,7 @@ import { FaEye, FaEyeSlash} from "react-icons/fa";
 
 
 export function LoginPage() {
+  const { login } = useAuth();
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -27,9 +29,20 @@ export function LoginPage() {
       return;
     }
 
+    const resultado = login(email, senha);
+
+    if (!resultado.ok) {
+      setMensagem(resultado.erro);
+      return;
+    }
+
     setMensagem('');
-    console.log('Dados de login:', { email, senha });
-    navigate('/dadoscadastro');
+
+    if (resultado.usuario.role === 'admin') {
+      navigate('/linhasadm', { replace: true });
+    } else {
+      navigate('/mapas', { replace: true });
+    }
   }
 
   return (
