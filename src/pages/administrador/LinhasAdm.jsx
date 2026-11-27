@@ -68,23 +68,23 @@ export function LinhasAdm({ onSalvar }) {
       <Cabecalho variante="admin" />
     <main className={styles.mainLinhasAdm}>
 
-          <h1 className="conteudoTitulo" id="tituloPagina">
+          <h1 className={styles.conteudoTitulo} id="tituloPagina">
             Nova linha
           </h1>
-          <p className="conteudoDescricao" id="subtituloPagina">
+          <p className={styles.conteudoDescricao} id="subtituloPagina">
             Cadastre uma linha e defina seu percurso.
           </p>
 
-      <div className="layoutFormulario">
+      <div className={styles.layoutFormulario}>
         <form
-          className="cartaoFormulario"
+          className={styles.cartaoFormulario}
           id="formLinha"
           onSubmit={handleSubmit}
           noValidate
         >
-          <h2 className="cartaoFormularioTitulo">Informações da linha</h2>
+          <h2 className={styles.cartaoFormularioTitulo}>Informações da linha</h2>
 
-          <div className="campo">
+          <div className={styles.campo}>
             <label htmlFor="numero">Número</label>
             <input
               type="text"
@@ -101,12 +101,12 @@ export function LinhasAdm({ onSalvar }) {
               aria-invalid={Boolean(erros.numero)}
               aria-describedby="erro-numero"
             />
-            <p className="campoErro" id="erroNumero" role="alert">
+            <p className={styles.campoErro} id="erroNumero" role="alert">
               {erros.numero || ""}
             </p>
           </div>
 
-          <div className="campo">
+          <div className={styles.campo}>
             <label htmlFor="nome">Nome</label>
             <input
               type="text"
@@ -123,12 +123,12 @@ export function LinhasAdm({ onSalvar }) {
               aria-invalid={Boolean(erros.nome)}
               aria-describedby="erro-nome"
             />
-            <p className="campoErro" id="erroNome" role="alert">
+            <p className={styles.campoErro} id="erroNome" role="alert">
               {erros.nome || ""}
             </p>
           </div>
 
-          <div className="campo">
+          <div className={styles.campo}>
             <label htmlFor="itinerario">Itinerário</label>
             <textarea
               id="itinerario"
@@ -143,29 +143,29 @@ export function LinhasAdm({ onSalvar }) {
               aria-invalid={Boolean(erros.itinerario)}
               aria-describedby="ajuda-itinerario erro-itinerario"
             />
-            <p className="campoAjuda" id="ajudaItinerario">
+            <p className={styles.campoAjuda} id="ajudaItinerario">
               Informe os principais locais do percurso.
             </p>
-            <p className="campoErro" id="erroItinerario" role="alert">
+            <p className={styles.campoErro} id="erroItinerario" role="alert">
               {erros.itinerario || ""}
             </p>
           </div>
 
-          <div className="acoesFormulario">
-            <Link className="botaoSecundario" to="/linhasadm">
+          <div className={styles.acoesFormulario}>
+            <Link className={styles.botaoSecundario} to="/linhasadm">
               Cancelar
             </Link>
-            <button type="submit" className="botaoPrincipal" id="botaoSalvar">
+            <button type="submit" className={styles.botaoPrincipal} id="botaoSalvar">
               Salvar linha
             </button>
           </div>
         </form>
 
-        <aside className="avisoLateral" id="avisoLateral">
-          <span className="selo" id="avisoNumero">
+        <aside className={styles.avisoLateral} id="avisoLateral">
+          <span className={styles.selo} id="avisoNumero">
             {numero.trim() || "—"}
           </span>
-          <h3 className="avisoLateralTitulo">Cada linha é única</h3>
+          <h3 className={styles.avisoLateralTitulo}>Cada linha é única</h3>
           <p id="aviso-texto">
             {nome.trim()
               ? `Você está cadastrando a linha ${nome.trim()}.`

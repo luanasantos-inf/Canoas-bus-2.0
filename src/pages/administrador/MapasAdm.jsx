@@ -4,12 +4,12 @@ import styles from './MapasAdm.module.css';
 
 export function MapasAdm() {
   return (
-    <div classname="styles.paginaMapasAdmWrapper">
-    <main className="mapaArea">
+    <div classname={styles.paginaMapasAdmWrapper}>
+    <main className={mainMapaArea}>
       <Cabecalho variante="admin"/>
       <div id="mapa" aria-label="Mapa de Canoas" />
 
-      <section className="mapaBusca" aria-labelledby="titulo-busca">
+      <section className={styles.mapaBusca} aria-labelledby="titulo-busca">
         <h2 id="tituloBusca">Para onde vamos?</h2>
         <p>Explore os pontos de Canoas.</p>
 
@@ -23,7 +23,7 @@ export function MapasAdm() {
 
       <section
         id="detalhes-ponto"
-        className="mapaDetalhes"
+        className={styles.mapaDetalhes}
         aria-labelledby="nome-ponto"
         hidden
       >

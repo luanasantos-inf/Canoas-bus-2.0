@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {Cabecalho} from "../../components/Cabecalho";
 import styles from './PontosAdm.module.css';
+
 
 export function PontosAdm({ onSalvar }) {
   const [nome, setNome] = useState("");
@@ -67,23 +69,23 @@ export function PontosAdm({ onSalvar }) {
   return (
      <div className={styles.paginaPontosAdmWrapper}>
     <Cabecalho variante="admin"/>
-    <main className="mainPontosAdm">
-          <h1 className="conteudoTitulo" id="tituloPagina">
+    <main className={styles.mainPontosAdm}>
+          <h1 className={styles.conteudoTitulo} id="tituloPagina">
             Novo ponto
           </h1>
-          <p className="conteudoDescricao" id="subtituloPagina">
+          <p className={styles.conteudoDescricao} id="subtituloPagina">
             Conecte um local às linhas da cidade.
           </p>
 
       <form
-        className="cartaoFormulario formularioPonto"
+        className={styles.cartaoFormulario}
         id="formPonto"
         onSubmit={handleSubmit}
         noValidate
       >
-        <h2 className="cartaoFormularioTitulo">Informações do ponto</h2>
+        <h2 className={styles.cartaoFormularioTitulo}>Informações do ponto</h2>
 
-        <div className="pontoGrade">
+        <div className={styles.pontoGrade}>
           <div className="campo">
             <label htmlFor="nome">Nome do ponto</label>
             <input
@@ -128,13 +130,13 @@ export function PontosAdm({ onSalvar }) {
             </p>
           </div>
 
-          {/* MAPA: o colega do mapa conecta aqui (veja o texto pro colega) */}
-          <div className="campo campoMapa">
-            <span className="campoRotulo">Localização no mapa</span>
-            <div className="mapaPonto" id="mapaPonto">
+          
+          <div className={styles.campoMapa}>
+            <span className={styles.campoRotulo}>Localização no mapa</span>
+            <div className={styles.mapaPonto} id="mapaPonto">
               <p>O mapa será conectado aqui.</p>
             </div>
-            <p className="campoAjuda">Clique no mapa para marcar o ponto.</p>
+            <p className={styles.campoAjuda}>Clique no mapa para marcar o ponto.</p>
             <input
               type="hidden"
               id="latitude"
@@ -149,10 +151,10 @@ export function PontosAdm({ onSalvar }) {
             />
           </div>
 
-          <fieldset className="grupoLinhas">
+          <fieldset className={styles.grupoLinhas}>
             <legend>Linhas vinculadas</legend>
-            <div className="listaLinhas" id="listaLinhas" />
-            <p className="campoAjuda" id="contagemLinhas" aria-live="polite">
+            <div className={styles.listaLinhas} id="listaLinhas" />
+            <p className={styles.campoAjuda} id="contagemLinhas" aria-live="polite">
               {linhasSelecionadas.length > 0
                 ? `${linhasSelecionadas.length} linha(s) selecionada(s)`
                 : "Nenhuma linha selecionada"}
@@ -160,11 +162,12 @@ export function PontosAdm({ onSalvar }) {
           </fieldset>
         </div>
 
-        <div className="acoesFormulario">
-          <a className="botaoSecundario" href="pontos.html">
+        <div className={styles.acoesFormulario}>
+          <Link className={styles.botaoSecundario} to="/admin/pontosadm" >
             Cancelar
-          </a>
-          <button type="submit" className="botaoPrincipal" id="botaoSalvar">
+            </Link>
+          
+          <button type="submit" className={styles.botaoPrincipal} id="botaoSalvar">
             Salvar ponto
           </button>
         </div>
