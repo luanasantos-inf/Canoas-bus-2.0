@@ -24,7 +24,7 @@
   --cor-vermelho-alerta: #b91c1c;
   --cor-vermelho-claro: #fef2f2;
   --cor-vermelho-hover: #b22222;
-  
+  --sombra:0 0 0 2px rgba(249, 115, 22, 0.3);
 }
 
 
@@ -37,10 +37,10 @@
   --cor-label: #d3d3d3;
   --cor-laranja-primario: #f97316;
   --cor-laranja-hover: #ea580c;
-  --cor-vermelho-alerta: #b91c1c;
-  --cor-vermelho-claro:transparent;
+  --cor-vermelho-alerta: #E7382F;
+  --cor-vermelho-claro: transparent;
   --cor-vermelho-hover: #b22222;
-  
+  --sombra:0 0 0 2px rgba(249, 115, 22, 0.3);
 }
 
 
@@ -145,6 +145,6 @@ video {
   border: 0;
 }
 
-* {
+*{
   font-family: var(--fonte-global);
 }
