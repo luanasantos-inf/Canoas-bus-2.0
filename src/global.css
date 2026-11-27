@@ -24,6 +24,8 @@
   --cor-vermelho-alerta: #b91c1c;
   --cor-vermelho-claro: #fef2f2;
   --cor-vermelho-hover: #b22222;
+  --cor-verde-claro:#f0fdf4;
+  --cor-verde-alerta:#15803d;
   --sombra:0 0 0 2px rgba(249, 115, 22, 0.3);
 }
 
@@ -40,6 +42,8 @@
   --cor-vermelho-alerta: #E7382F;
   --cor-vermelho-claro: transparent;
   --cor-vermelho-hover: #b22222;
+  --cor-verde-claro:#f0fdf4;
+  --cor-verde-alerta:#15803d;
   --sombra:0 0 0 2px rgba(249, 115, 22, 0.3);
 }
 
