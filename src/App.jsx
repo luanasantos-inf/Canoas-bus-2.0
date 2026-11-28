@@ -4,15 +4,16 @@ import { AuthProvider, useAuth } from "./AuthContext";
 import { LoginPage } from './pages/publico/LoginPage.jsx'
 import { CriarContaPage } from './pages/publico/CriarContaPage.jsx';
 
-import { DadosCadastroPage } from './pages/usuario/DadosCadastroPage.jsx';
+import { DadosCadastroPage } from './pages/usuario/DadosCadastroPage.jsx'
 import { FavoritosPage } from './pages/usuario/FavoritosPage.jsx';
 import { LinhasPage } from './pages/usuario/LinhasPage.jsx';
 import { PontosPage } from './pages/usuario/PontosPage.jsx';
 import { MapasPage } from './pages/usuario/MapasPage.jsx';
 
-import {MapasAdm} from './pages/administrador/MapasAdm.jsx';
+import { MapasAdm } from './pages/administrador/MapasAdm.jsx';
 import { LinhasAdm } from './pages/administrador/LinhasAdm.jsx';
-import {PontosAdm} from './pages/administrador/PontosAdm.jsx';
+import { PontosAdm } from './pages/administrador/PontosAdm.jsx';
+import { CadastroAdm } from './pages/administrador/CadastroAdm.jsx';
 
 import './global.css';
 
@@ -41,29 +42,30 @@ function Layout({ variante }) {
 export function App() {
   return (
     <AuthProvider>
-    <BrowserRouter>
-    
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/criar-conta" element={<CriarContaPage />} />
+      <BrowserRouter>
 
-        <Route element={<Layout variante="usuario" />}>
-          <Route path="/usuario/dadoscadastro" element={<DadosCadastroPage />} />
-          <Route path="/usuario/favoritos" element={<FavoritosPage />} />
-          <Route path="/usuario/linhas" element={<LinhasPage />} />
-          <Route path="/usuario/pontos" element={<PontosPage />} />
-          <Route path="/usuario/mapas" element={<MapasPage />} />
-        </Route>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/criar-conta" element={<CriarContaPage />} />
 
-        <Route element={<Layout variante="admin" />}>
-          <Route path="/admin/MapasAdm" element={<MapasAdm />} />
-          <Route path="/admin/linhasadm" element={<LinhasAdm />} />
-          <Route path="/admin/pontosadm" element={<PontosAdm />} />
-        </Route>
+          <Route element={<Layout variante="usuario" />}>
+            <Route path="/usuario/dadoscadastro" element={<DadosCadastroPage />} />
+            <Route path="/usuario/favoritos" element={<FavoritosPage />} />
+            <Route path="/usuario/linhas" element={<LinhasPage />} />
+            <Route path="/usuario/pontos" element={<PontosPage />} />
+            <Route path="/usuario/mapas" element={<MapasPage />} />
+          </Route>
 
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </BrowserRouter>
+          <Route element={<Layout variante="admin" />}>
+            <Route path="/admin/MapasAdm" element={<MapasAdm />} />
+            <Route path="/admin/linhasadm" element={<LinhasAdm />} />
+            <Route path="/admin/pontosadm" element={<PontosAdm />} />
+            <Route path="/admin/cadastroadm" element={<CadastroAdm/>}/>
+          </Route>
+
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
     </AuthProvider>
   );
 }
