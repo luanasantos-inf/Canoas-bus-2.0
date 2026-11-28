@@ -16,11 +16,11 @@
   align-items: stretch;
   flex: 1;
   gap: 2rem;
-  padding: 1.5rem 1.25rem;
+  padding: 1.5rem 5%;
   width: 100%;
-  max-width: 1360px;
+  max-width: 100vw;
   margin: 0 auto;
-  background-color:var(--background-corpo);
+  background-color: var(--background-corpo);
 }
 
 .apresentacao {
@@ -56,14 +56,10 @@
 }
 
 .apresentacaoImagem {
-  display: block;
   width: 100%;
-  max-width: 420px;
-  height: auto;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 2rem;
+  max-width: 70%;
+  align-self: center;
+  margin: auto;
 }
 
 .recepcaoFormulario {
@@ -75,7 +71,7 @@
   max-width: 32rem;
   width: 100%;
   margin: 0 auto;
-  color:var(--titulos-textos);
+  color: var(--titulos-textos);
 }
 
 .fraseApoio {
@@ -118,7 +114,7 @@
 .campoPreenchimento input:focus {
   outline: none;
   border-color: var(--cor-laranja-primario);
-  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+  box-shadow: var(--sombra);
 }
 
 .campoPreenchimentoSenha {
@@ -134,14 +130,14 @@
   padding: 0 2.75rem 0 0.875rem;
   border-radius: 12px;
   border: 1px solid var(--detalhes);
-  background-color:transparent;
+  background-color: transparent;
   color: var(--titulos-textos);
 }
 
 .campoPreenchimentoSenha input:focus {
   outline: none;
   border-color: var(--cor-laranja-primario);
-  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+  box-shadow: var(--sombra);
 }
 
 .botaoMostrarSenha {
@@ -165,12 +161,21 @@
   color: var(--detalhes);
 }
 
-.mensagem {
-  font-size: 0.875rem;
-  color: var(--cor-vermelho-alerta);
+.campoRequisito{
+  font-size: 0.8rem;
 }
 
-.btnCadastrar {
+.mensagem {
+  font-size: 0.875rem;
+  margin-top: 0.1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--cor-vermelho-claro);
+  color: var(--cor-vermelho-alerta);
+  border: 1px solid var(--cor-vermelho-alerta);
+}
+
+.botaoCadastrar {
   width: 100%;
   height: 2.5rem;
   padding: 0.625rem;

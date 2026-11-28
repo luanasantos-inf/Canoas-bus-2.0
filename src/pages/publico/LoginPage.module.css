@@ -16,10 +16,10 @@
   align-items: stretch;
   flex: 1;
   gap: 2rem;
-  padding: 1.5rem 1.25rem;
-  width: 100%;
+  padding: 1.5rem 5%;
+  width: 100vw;
   margin: 0 auto;
-  background-color:var(--background-corpo);
+  background-color: var(--background-corpo);
 }
 
 
@@ -36,7 +36,7 @@
 .apresentacaoSlogan {
   font-size: 0.75rem;
   font-weight: var(--fonte-600);
-  color: var(--cor-laranja-texto);
+  color: var(--cor-laranja-primario);
   letter-spacing: 0.5px;
 }
 
@@ -56,14 +56,10 @@
 }
 
 .apresentacaoImagem {
-  display: block;
   width: 100%;
-  max-width: 420px;
-  height: auto;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 2rem;
+  max-width: 70%;
+  align-self: center;
+  margin: auto;
 }
 
 .recepcaoFormulario {
@@ -75,7 +71,7 @@
   max-width: 32rem;
   width: 100%;
   margin: 0 auto;
-  color:var(--titulos-textos);
+  color: var(--titulos-textos);
 }
 
 .fraseApoio {
@@ -112,14 +108,14 @@
   padding: 0 0.875rem;
   border-radius: 12px;
   border: 1px solid var(--detalhes);
-  background-color:transparent;
+  background-color: transparent;
   color: var(--detalhes);
 }
 
 .campoPreenchimento input:focus {
   outline: none;
   border-color: var(--cor-laranja-primario);
-  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+  box-shadow: var(--sombra);
 }
 
 .campoPreenchimento input::placeholder {
@@ -151,7 +147,7 @@
 .campoPreenchimentoSenha input:focus {
   outline: none;
   border-color: var(--cor-laranja-primario);
-  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+  box-shadow: var(--sombra);
 }
 
 .botaoMostrarSenha {
@@ -177,7 +173,12 @@
 
 .mensagem {
   font-size: 0.875rem;
-  color: var(--cor-vermelho--alerta);
+  margin-top: 0.1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--cor-vermelho-claro);
+  color: var(--cor-vermelho-alerta);
+  border: 1px solid var(--cor-vermelho-alerta);
 }
 
 .btnEntrar {
@@ -202,7 +203,7 @@
   font-size: 0.875rem;
   font-weight: var(--fonte-400);
   padding-top: 1.5rem;
-  color:var(--detalhes);
+  color: var(--detalhes);
 }
 
 .mudarEntrada a {

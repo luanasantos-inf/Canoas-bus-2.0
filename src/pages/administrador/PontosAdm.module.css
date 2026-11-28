@@ -1,0 +1,13 @@
+.paginaPontosAdmWrapper,
+.paginaPontosAdmWrapper * {
+  box-sizing: border-box;
+}
+
+.paginaPontosAdmWrapper{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    background-color: blue;
+    font-size: xx-small;
+    color:aqua;
+}

@@ -1,10 +1,16 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Cabecalho } from '../components/Cabecalho';
-import { Rodape } from '../components/Rodape';
-import styles from'./LoginPage.module.css';
+import { useAuth } from "../../AuthContext";
+import { Cabecalho } from '../../components/Cabecalho';
+import { Rodape } from '../../components/Rodape';
+import styles from  './LoginPage.module.css';
+import percursoLight from '../../assets/percurso-ilustrativo.png';
+import percursoDark from '../../assets/percurso-ilustrativo-dark.png';
+import { FaEye, FaEyeSlash} from "react-icons/fa";
+
 
 export function LoginPage() {
+  const { login } = useAuth();
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -23,13 +29,24 @@ export function LoginPage() {
       return;
     }
 
+    const resultado = login(email, senha);
+
+    if (!resultado.ok) {
+      setMensagem(resultado.erro);
+      return;
+    }
+
     setMensagem('');
-    console.log('Dados de login:', { email, senha });
-    navigate('/dadoscadastro');
+
+    if (resultado.usuario.role === 'admin') {
+      navigate('admin/linhasadm', { replace: true });
+    } else {
+      navigate('usuario/mapas', { replace: true });
+    }
   }
 
   return (
-    
+
     <div className={styles.paginaLoginWrapper}>
       <Cabecalho variante="publico" />
 
@@ -41,10 +58,16 @@ export function LoginPage() {
             Encontre linhas e pontos de ônibus e explore Canoas com mais facilidade.
           </p>
           <img
-            className={styles.apresentacaoImagem}
-            src="../../src/assets/percurso-ilustrativo.svg"
+            className={`${styles.apresentacaoImagem} imgLight`}
+            src={percursoLight}
             alt="Ilustração de transporte público em Canoas"
           />
+          <img
+            className={`${styles.apresentacaoImagem} imgDark`}
+            src={percursoDark}
+            alt="Ilustração de transporte público em Canoas"
+          />
+
         </aside>
 
         <div className={styles.recepcaoFormulario}>
@@ -58,7 +81,7 @@ export function LoginPage() {
             noValidate
           >
             <div className={styles.campoPreenchimento}>
-              <label htmlFor="e-mail">E-mail</label>
+              <label htmlFor="email">E-mail</label>
               <input
                 type="email"
                 id="email"
@@ -89,10 +112,12 @@ export function LoginPage() {
                   aria-pressed={mostrarSenha}
                   onClick={alternarVisibilidadeSenha}
                 >
-                  <i
-                    className={`fa-solid ${mostrarSenha ? 'fa-eye-slash' : 'fa-eye'}`}
-                    aria-hidden="true"
-                  ></i>
+                  {mostrarSenha ? (
+                    <FaEyeSlash size={18} aria-hidden="true" />
+                  ) : (
+                    <FaEye size={18} aria-hidden="true" />
+                  )}
+
                 </button>
               </div>
             </div>

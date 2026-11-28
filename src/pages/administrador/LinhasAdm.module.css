@@ -1,0 +1,14 @@
+.paginaLinhasAdmWrapper,
+.paginaLinhasAdmWrapper * {
+  box-sizing: border-box;
+}
+
+.paginaLinhasAdmWrapper{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    background-color: red;
+    font-size: xx-small;
+    color:brown;
+}
+
